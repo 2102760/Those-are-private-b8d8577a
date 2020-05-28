@@ -26,6 +26,12 @@ class MyLogger
         $this->logWithTime('Error: ' . $message);
     }
 
+    private function logWithTime($type, $message)
+    {
+        $date = date('Y-m-d H:i:s');
+        echo('[' . $date . '] ' . $type . ': ' . $message);
+    }
+
     public function debug($message)
     {
         $this->logWithTime('Debug: ' . $message);
@@ -39,12 +45,6 @@ class MyLogger
     public function warning($message)
     {
         $this->logWithTime('warning', $message);
-    }
-
-    private function logWithTime($type, $message)
-    {
-        $date = date('Y-m-d H:i:s');
-        echo('[' . $date . '] ' . $type . ': ' . $message);
     }
 }
 
