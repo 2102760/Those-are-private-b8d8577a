@@ -10,6 +10,7 @@ class MyLogger
                 break;
             case 'debug':
                 $this->debug($message);
+                break;
             case 'notice':
                 $this->notice($message);
                 break;
